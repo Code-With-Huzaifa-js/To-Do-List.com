@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: poppins;
+        }
+        body{
+            background-color: lightskyblue;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .container{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top:-50px;
+        }
+
+        .container .Box{
+            position: relative;
+            width: 400px;
+            height: a;
+            padding: 20px 30px;
+            background: white;
+            border-radius: 10px;
+        }
+        .Box .heading{
+            display: flex;
+            gap:15px;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .fa-book{
+            font-size: 25px;
+            color: green;
+            margin-top: 4px;
+        }
+
+        .fileds{
+            position: relative;
+        }
+        .fileds #Input{
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(187, 187, 187, 0.479);
+            font-size: 14px;
+            border-radius: 50px;
+            border: 0px;
+            outline: none;
+        }
+
+
+        .fileds #add{
+            position: absolute;
+            right: 0;
+            padding: 10px 40px;
+            border-radius: 50px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            background: orangered;
+            color: white;
+            font-weight: 500;
+        }
+
+        ul{
+            margin-top: 30px;
+            padding-left: 30px;
+            list-style: none;
+            margin-bottom:20px;
+        }
+
+        ul li{
+            position: relative;
+            font-size: 15px;
+            cursor: pointer;
+            padding: 10px;
+        }
+        ul li::before{
+            content: '';
+            position: absolute;
+            top: 12px;
+            left:-30px;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            background: rgba(187, 187, 187, 0.479);
+        }
+
+        #list-Container span{
+            position: absolute;
+            right: 0px;
+            top: 9px;
+            width: 25px;
+            height: 25px;
+            font-size: 17px;
+            text-align: center;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.479);
+
+            &:hover{
+                background:orangered;
+                color: white;
+            }
+        }
+        .Checked{
+            text-decoration: line-through;
+        }
+        .Checked::before{
+            background: orangered;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="Box">
+
+            <span class="heading">
+                <h2>To-Do List</h2>
+                <i class="fa-solid fa-book"></i>
+            </span>
+
+            <div class="fileds">
+
+                <input type="text" id="Input" placeholder="Add Task">
+                <button id="add" onclick="addTask()">Add</button>
+
+            </div>
+
+            <ul id="list-Container">
+            </ul>
+
+        </div>
+
+    </div>
+
+</body>
+ 
+<script defer src="Todo.js"></script>
+</html>
